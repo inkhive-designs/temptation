@@ -1,0 +1,290 @@
+/* Single Posts Area */
+#primary-mono,#primary {
+  padding: 20px 0px;
+  @media screen and (min-width: 991px){
+    position: relative;
+    height: 100%;
+  }
+  position: relative;
+  height: 100%;
+  @media screen and (min-width: 991px) {
+    border-right: 2px solid lighten(@layer, 10%);
+  }
+  background: fade(@layer,50%);
+  article{
+    float: left;
+    .entry-footer{
+      .cat-links,.tags-links{
+        display: block;
+        color: @content;
+        font-size: 12px;
+        padding: 15px 0px;
+        font-weight: bold;
+        text-transform: uppercase;
+        a{
+          color: @content;
+          padding: 5px;
+          font-size: 11px;
+          @media screen and (max-width: 767px){
+            padding: 3px;
+            font-size: 9px;
+          }
+          &:hover{
+            background: @accent;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .entry-header{
+    font-size: 20px;
+    font-weight: bold;
+    color: lighten(@accent,6%);
+    padding: 0px 30px;
+    margin: 30px 0px;
+  }
+  #featured-image{
+    padding: 0px 30px;
+    margin: 30px 0px;
+  }
+
+  .Temptation .Temptation-wrapper{
+      margin-bottom: 60px;
+    h2.entry-title{
+      margin: 0px;
+      color: @accent;
+      text-shadow: 2px 2px 4px #000;
+      text-transform: uppercase;
+      font-weight: 800;
+      @media screen and (max-width: 767px){
+        margin-top: 10px;
+      }
+    }
+    .out-thumb{
+      a.post-ttl{
+        text-decoration: none;
+        color: @content;
+      }
+
+      p.entry-excerpt{
+        font-size: 16px;
+        color: @content !important;
+      }
+    }
+  }
+
+    @media screen and (max-width: 767px){
+      article{
+      float: none;
+      overflow: hidden;
+      clear: both;
+    }
+  }
+  .nav-links {
+    padding: 10px 0px;
+    padding-top: 20px;
+    border-bottom: solid 2px darken(@background, 10%);
+    overflow: auto;
+    .nav-previous{
+      padding: 0;
+      a{
+        color: @content;
+        font-weight: bold;
+        @media screen and (max-width: 767px){
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+      &:before{
+        cursor: pointer;
+        padding: 0px 5px;
+        content: "\f060";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 16px;
+        margin-right: 5px;
+        color: @accent;
+      }
+    }
+    .nav-next{
+      a{
+        color: @content;
+        font-size: 14px;
+        font-weight: bold;
+        @media screen and (max-width: 767px){
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+      &:after{
+        cursor: pointer;
+        padding: 0px 5px;
+        content: "\f061";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 16px;
+        margin-left: 5px;
+        color: @accent;
+      }
+    }
+  }
+}
+.edit-link {
+  display: inline-block;
+  float: right;
+}
+.single,.blog,.page,.archive,.category {
+
+    .entry-content{
+      font-size: 16px;
+      a{
+        color: @accent;
+      }
+    }
+
+  #primary .entry-header {
+    margin: 0px;
+    .breadcrumb1{
+      padding: 15px 0px;
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+    .breadcrumb1{
+      a {
+        color: lighten(@content, 50%);
+        font-weight: normal;
+      }
+      span{
+        color: lighten(@content, 50%);
+      }
+    }
+  }
+  #primary {
+  }
+  .entry-content,.entry-footer,.post-navigation {
+    padding: 0px 30px;
+    color: @content;
+  }
+  .entry-title{
+    margin: 0px;
+    color: @accent;
+    text-transform: none;
+    font-weight: normal;
+    margin-bottom: 10px;
+    @media screen and (max-width: 767px){
+      margin-top: 10px;
+    }
+  }
+  .entry-meta {
+    font-size: 12px;
+    .posted-on {
+      display: none;
+    }
+    .byline{
+      color: @content;
+      font-weight: normal;
+      text-transform: capitalize;
+    }
+    .author,.vcard a{
+      color: @accent;
+      font-weight: bold;
+    }
+  }
+}
+.archive .entry-title a, .category .entry-title a, .page .entry-title a, .single .entry-title a{
+
+  margin: 0px;
+
+  text-transform: uppercase;
+  font-weight: 800;
+  @media screen and (max-width: 767px){
+    margin-top: 10px;
+  }
+}
+.archive #primary .page-title,.category #primary .page-title{
+  color: @accent;
+}
+.archive,.category #primary .page-title{
+  margin: 0px;
+}
+.archive #primary .page-header,.category #primary .page-header{
+  margin-top: 0px;
+  padding: 20px;
+  border-bottom: none;
+  a{
+    &:hover{
+    text-decoration: none;
+      }
+  }
+}
+.home,.blog,.category,.archive {
+#primary {
+  article {
+    border-bottom: 2px solid lighten(@layer, 10%) !important;
+    padding-bottom: 20px;
+    img {
+      opacity: 0.6;
+      box-shadow: 2px 2px 4px #000;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .out-thumb {
+      .cat, p.entry-excerpt {
+        color: @content !important;
+      }
+      a.post-ttl {
+        color: @accent;
+        h3.entry-title {
+          font-size: 20px;
+          margin-top: 15px;
+        }
+        .cat {
+          font-size: 12px !important;
+          margin-bottom: 10px !important;
+        }
+        &:hover {
+          color: darken(@accent, 20%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+}
+.home,.blog,.category,.archive {
+  #primary {
+    .temptation {
+      float: left !important;
+      .out-thumb {
+        p.entry-excerpt {
+          margin-bottom: 30px;
+        }
+        .cat {
+          margin-top: 20px;
+          span.cat-links {
+            a {
+              background: @accent !important;
+              color: #efefef !important;
+              padding: 5px;
+              font-size: 12px;
+              font-style: italic;
+              border: 1px solid @layer !important;
+              border-radius: 2px;
+              position: relative;
+              margin-top: 4px;
+              display: inline-block;
+              &:hover {
+                border: 1px solid @accent !important;
+                background: none !important;
+                text-decoration: none;
+                border-radius: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

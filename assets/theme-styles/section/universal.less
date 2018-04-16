@@ -1,0 +1,40 @@
+#content {
+  background: fade(@background,40%);
+  border-radius: 12px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-top: 30px;
+  clear: both;
+  z-index: 9999 !important;
+  overflow: auto;
+  overflow: hidden !important;
+  @media screen and (min-width: 767px){
+    position: relative;
+    margin-top: -95px;
+  }
+  @media screen and (min-width: 767px) and (max-width: 1200px) {
+    margin-top: -50px;
+  }
+    @media screen and (min-width: 991px) {
+    padding: 0;
+  }
+}
+body {
+  .body-font;
+  background: @body-bg;
+  word-wrap: break-word;
+  overflow: auto;
+  overflow-x: auto;
+  line-height: 1.8;
+}
+//header image
+.header-image-wrapper{
+  position: relative;
+  text-align: center !important;
+}
+.header-image{
+  margin: auto;
+}
+#searchicon{
+  padding: 0px 7px;
+}

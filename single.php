@@ -1,41 +1,35 @@
 <?php
 /**
- * The Template for displaying all single posts.
+ * The template for displaying all single posts
  *
- * @package Temptation
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package temptation
  */
 
 get_header(); ?>
 
-	</div>
-	<?php while ( have_posts() ) : the_post(); ?>
-	<div id="title-bar">
-		<h1 class="bar-entry-title container"><div class="actual-title"><?php the_title(); ?></div></h1>
-	</div>	
-	<?php endwhile; ?>	
+    <div id="primary-mono" class="content-area <?php do_action('temptation_primary-width') ?>">
+        <main id="main" class="site-main" role="main">
 
-	<div class="container col-md-12"><!-- restart previous section-->
-	
-	<div id="primary" class="content-area primary-single col-md-8">
-		<main id="main" class="site-main" role="main">
+		<?php
+		while ( have_posts() ) : the_post();
 
-		<?php while ( have_posts() ) : the_post(); ?>
+         get_template_part( 'modules/content/content', 'single' );
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			the_post_navigation();
 
-			<?php //temptation_content_nav( 'nav-below' ); ?>
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() )
-					comments_template();
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
+		endwhile; // End of the loop.
+		?>
+        <?php if(have_posts()): temptation_pagination(); endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_sidebar('footer'); ?>
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();

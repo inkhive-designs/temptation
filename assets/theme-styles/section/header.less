@@ -1,0 +1,135 @@
+#masthead{
+ // background: url(../../images/masthead.png) repeat;
+  .site-title-wrapper{
+    text-align: center;
+    padding: 10px 0px;
+  }
+  // Site logo
+  .site-branding{
+    position: relative;
+    text-align: center;
+    float: none;
+    overflow: hidden;
+    display: inline-block;
+    @media screen and (max-width: 991px){
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      float: none;
+    }
+    #site-logo{
+      padding: 0px 25px;
+      img{
+        max-height: 65px;
+        width: auto;
+        padding: 5px;
+      }
+    }
+    .site-title {
+      &:hover{
+        a {
+          text-decoration: none;
+          color: @accent !important;
+          text-shadow: 2px 2px 4px #000 !important;
+        }
+      }
+      padding: 0px 25px;
+      text-align: center;
+      font-size: 32px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      text-align: center;
+      @media screen and (max-width: 991px){
+        text-align: center;
+      }
+      a {
+        font-weight: normal;
+        text-align: left;
+        @media screen and (max-width: 991px){
+          text-align: center;
+        }
+      }
+    }
+    p.site-description{
+      font-size: 14px;
+      padding: 0px 25px;
+      text-align: left;
+    }
+  }
+  //Top-menu
+  .top-menu-wrapper{
+    text-align: right !important;
+    padding: 20px 0px 10px 0px;
+    display: inline-block;
+    margin-left: 25px;
+    .search-icon{
+      float: right;
+      padding: 0px 10px;
+      @media screen and (min-width: 767px) and (max-width: 991px){
+        padding: 0px 6px;
+      }
+    }
+  }
+  .top-menu {
+    display: inline;
+    ul#top-menu{
+    }
+    @media screen and (max-width: 767px){
+      display: none !important;
+    }
+
+    .menu-top-menu-container{
+      display: inline-block;
+      padding-top: 3px;
+    }
+    ul li{
+      margin-right: 5px;
+      a {
+        background: @accent;
+        text-decoration: none;
+        font-size: 12px;
+        padding: 7px;
+        @media screen and (max-width: 1200px){
+          font-size: 11px;
+        }
+        color: @onaccent;
+        font-weight: normal;
+          }
+    }
+    @media screen and (max-width: 767px) {
+      clear: both;
+      display: inline-block;
+      float: none;
+      width: auto;
+    }
+  }
+
+  .main-navigation {
+    clear: both;
+    display: inline;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  nav.top-menu ul ul{
+    display: none !important;
+  }
+  .search-icon-wrapper{
+    .search-icon{
+      @media screen and (min-width: 991px){
+        position: relative;
+        float: right;
+      }
+      @media screen and (max-width: 991px) {
+        float: right;
+      }
+      i{
+        font-weight: bolder;
+        color: @onaccent;
+        font-size: 14px;
+        padding: 6px 6px;
+      }
+    }
+  }
+
+}

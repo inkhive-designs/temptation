@@ -1,35 +1,32 @@
 <?php
-/**
- * The Sidebar containing the footer widget areas.
- *
- * @package Temptation
+/*
+ * The Footer Widget Area
+ * @package temptation
  */
 ?>
-	<div class="clear"></div>
-	<div id="gototop">
-		<a href="#page" title="<?php _e('Go to Top','temptation') ?>"><img src="<?php echo get_template_directory_uri() ?>/images/top.png"></a>
-	</div>
-	</div><!--.container-->
-	<div id="footer-sidebar" class="widget-area col-md-12 clearfix" role="complementary">
-		<div class="container col-md-12">
-			<?php do_action( 'before_sidebar' ); ?>
-			<?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-			<div class="footer-column col-md-4"> <?php
-				dynamic_sidebar( 'sidebar-2'); 
-			?> </div> <?php	
-			}
-				
-			if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-			<div class="footer-column col-md-4"> <?php
-				dynamic_sidebar( 'sidebar-3'); 
-			?> </div> <?php	
-			}
-	
-			if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
-			<div class="footer-column col-md-4"> <?php
-				dynamic_sidebar( 'sidebar-4'); 
-			?> </div> <?php	
-			}
-			?>	 
-		</div>	
-	</div>
+    </div><!--.mega-container-->
+<?php if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') ) : ?>
+    <div id="footer-sidebar" class="widget-area">
+        <div class="container">
+            <?php get_template_part('modules/footer/bottom','bar'); ?>
+            <?php
+            if ( is_active_sidebar( 'footer-1' ) ) : ?>
+                <div class="footer-column col-md-4 col-sm-4">
+                    <?php dynamic_sidebar( 'footer-1'); ?>
+                </div>
+            <?php endif;
+
+            if ( is_active_sidebar( 'footer-2' ) ) : ?>
+                <div class="footer-column col-md-4 col-sm-4">
+                    <?php dynamic_sidebar( 'footer-2'); ?>
+                </div>
+            <?php endif;
+
+            if ( is_active_sidebar( 'footer-3' ) ) : ?>
+                <div class="footer-column col-md-4 col-sm-4"> <?php
+                    dynamic_sidebar( 'footer-3'); ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>	<!--#footer-sidebar-->
+<?php endif; ?>

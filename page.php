@@ -1,43 +1,38 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying all pages
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
+ * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @package Temptation
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package temptation
  */
 
 get_header(); ?>
 
-	</div>
-	<?php while ( have_posts() ) : the_post(); ?>
-	<div id="title-bar">
-		<h1 class="bar-entry-title container"><div class="actual-title"><?php the_title(); ?></div></h1>
-	</div>	
-	<?php endwhile; ?>	
-	<div class="container col-md-12"><!-- restart previous section-->
+    <div id="primary-mono" class="content-area <?php do_action('temptation_primary-width') ?>">
+        <main id="main" class="site-main" role="main">
 
-	<div id="primary" class="content-area col-md-8">
-		<main id="main" class="site-main" role="main">
+			<?php
+			while ( have_posts() ) : the_post();
 
-			<?php while ( have_posts() ) : the_post(); ?>
+				get_template_part( 'modules/content/content', 'page' );
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template();
-				?>
-
-			<?php endwhile; // end of the loop. ?>
-
+			endwhile; // End of the loop.
+			?>
+            <?php if(have_posts()): temptation_pagination(); endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_sidebar('footer'); ?>
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();
