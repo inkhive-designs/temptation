@@ -78,7 +78,7 @@ if ( ! function_exists( 'temptation_setup' ) ) :
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'temptation_custom_background_args', array(
-			'default-color' => 'ffffff',
+			'default-color' => '171717',
 			'default-image' => '',
 		) ) );
 

@@ -2,6 +2,7 @@
 function temptation_customize_register_skins($wp_customize){
     $wp_customize->get_section('colors')->title = __('Theme Skins & Colors','temptation');
     $wp_customize->get_section('colors')->panel = 'temptation_layout_panel';
+    $wp_customize->get_control('background_color')->default = '#171717';
 
     $wp_customize->add_setting('temptation_site_titlecolor', array(
         'default'     => '#ededed',

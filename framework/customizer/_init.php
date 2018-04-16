@@ -35,7 +35,8 @@ function temptation_customize_register( $wp_customize ) {
                 'label'    => __( 'Disable overlay Content.','temptation' ),
                 'section'  => 'rtslider_sec_slider_options',
                 'type'     => 'checkbox',
-                'default'  => false
+                'default'  => false,
+                'priority' => 1
             )
         );
 

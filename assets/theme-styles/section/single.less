@@ -1,4 +1,4 @@
-.single,.page,.category,.archive{
+.single,.page,.category,.archive,.search,.search-results,.search-no-results{
   #primary-mono{
     article{
       float: none;
@@ -49,5 +49,41 @@
         }
       }
     }
+  }
+}
+.search-no-results{
+  #primary-mono{
+    .page-header {
+      border-bottom: none;
+      h1.page-title {
+        padding: 20px;
+        color: lighten(@accent, 6%);
+        text-shadow: 2px 2px 4px #000;
+        margin-bottom: 20px;
+        border-bottom: 2px solid lighten(@layer, 10%);
+      }
+    }
+      .page-content{
+        padding-right: 40px;
+        padding-left: 40px;
+        p {
+          color: @content;
+        }
+        .search-form .search-field{
+          border: 2px solid @accent;
+          background: transparent;
+        }
+        .search-form .search-submit{
+          background: @layer;
+          color: @accent;
+          font-size: 14px;
+          border: none;
+          &:hover{
+            background: @accent;
+            color: #f5f5f5;
+          }
+        }
+      }
+
   }
 }

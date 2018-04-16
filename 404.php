@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-    <div id="primary" class="content-area <?php do_action('temptation_primary-width') ?>">
+    <div id="primary-mono" class="content-area <?php do_action('temptation_primary-width') ?>">
         <main id="main" class="site-main" role="main">
 			<section class="error-404 not-found">
 				<header class="page-header">

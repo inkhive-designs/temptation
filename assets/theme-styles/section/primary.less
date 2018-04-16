@@ -134,7 +134,7 @@
   display: inline-block;
   float: right;
 }
-.single,.blog,.page,.archive,.category {
+.single,.blog,.search,.page,.archive,.category,.search-results,.search-no-results {
 
     .entry-content{
       font-size: 16px;
@@ -192,7 +192,9 @@
     }
   }
 }
-.archive .entry-title a, .category .entry-title a, .page .entry-title a, .single .entry-title a{
+.archive .entry-title a,.search-results .entry-title a,
+.category .entry-title a, .page .entry-title a,.search .entry-title a,
+.single .entry-title a,.search-no-results .entry-title a{
 
   margin: 0px;
 
@@ -202,13 +204,14 @@
     margin-top: 10px;
   }
 }
-.archive #primary .page-title,.category #primary .page-title{
+.archive #primary .page-title,.category #primary .page-title,
+.search-results #primary-mono .page-title,.search-no-results #primary .page-title{
   color: @accent;
 }
 .archive,.category #primary .page-title{
   margin: 0px;
 }
-.archive #primary .page-header,.category #primary .page-header{
+.archive #primary .page-header,.category #primary .page-header,.search-no-results #primary .page-header{
   margin-top: 0px;
   padding: 20px;
   border-bottom: none;
@@ -218,7 +221,7 @@
       }
   }
 }
-.home,.blog,.category,.archive {
+.home,.blog,.category,.archive,.search,.search-no-results {
 #primary {
   article {
     border-bottom: 2px solid lighten(@layer, 10%) !important;
@@ -253,7 +256,7 @@
   }
 }
 }
-.home,.blog,.category,.archive {
+.home,.blog,.category,.archive,.search,.search-no-results{
   #primary {
     .temptation {
       float: left !important;

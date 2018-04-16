@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-    <section id="primary" class="<?php do_action('temptation_primary-width') ?> content-area">
+<div id="primary-mono" class="content-area <?php do_action('temptation_primary-width') ?>">
         <main id="main" class="site-main" role="main">
 
 		<?php
@@ -37,7 +37,7 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+</div><!-- #primary -->
 
 <?php
 get_sidebar();

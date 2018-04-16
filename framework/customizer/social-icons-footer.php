@@ -8,7 +8,8 @@ function temptation_customize_register_social_footer( $wp_customize ){
     $wp_customize -> add_section('temptation_social_section_footer', array(
         'title' => __('Social Icons (Footer)','temptation'),
         'priority' => 30,
-        'panel' => 'temptation_header_panel'
+        'panel' => 'temptation_header_panel',
+        'description' => __('Note: <strong> Footer Sidebar </strong> must contain atleast one <strong> Widget Area </strong> for displaying Footer Social Icons.','temptation')
     ));
 
     $social_networks_footer = array(
