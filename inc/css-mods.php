@@ -51,7 +51,7 @@ function temptation_custom_css_mods(){
 
     }
 
-    if(get_theme_mod('temptation_disable_overlay',true)):
+    if(get_theme_mod('temptation_disable_overlay')):
         $custom_css .= "#content{margin-top:0px;}";
             endif;
 
