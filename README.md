@@ -64,3 +64,7 @@ All the Images used in the Screenshot are Public Domain.
 ### 1.1.0
 
 * Initial Release.
+
+### 1.1.1
+
+* Theme Description Added
